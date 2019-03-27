@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="pt">
+    <head>
+        <!-- Required meta tags -->
+        <title>CHS Sports: Um gerenciador de campeonatos esportivos</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link href="style.css" rel="stylesheet">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    </head>
+    
+    <body>
+        <nav class="navbar navbar-light" style="nav">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-left" href="#"><img src="imagens/logo.png" width="270" height="45"></a>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <form class="navbar-form navbar-left" action="/action_page.php">
+                        <div class="input-group">
+                            <input type="text" class="form-control search-bar" placeholder="Buscar campeonatos, times...">
+                            <div class="input-group-btn">
+                            <button class="btn btn-default search" type="submit">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                            </div>
+                        </div>
+                    </form>
+                    <li><!--<a href="#" class="username">Nome do Usuário</a></li>-->
+                        <div class="dropdown">
+                            <button type="button" class="btn username dropdown-toggle" data-toggle="dropdown"> <img src="imagens/default-profile-icon.png" height="35" style="margin-right: 5px"/> Nome do Usuário  <span class="caret"></span></button>
+                            <div class="dropdown-menu" height="100" role="menu">
+                                <a class="menu-item" href="#">Meus Campeonatos</a><br>
+                                <a class="menu-item" href="#">Meus times</a><br>
+                                <a class="menu-item" href="#">Meu perfil</a><br>
+                                <a class="menu-item" href="#">Sair</a><br>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+        <div class="row">
+            <div class="col-lg-12">
+                <form>
+                    <!-- Caixa de Texto do Nome do Campeonato -->
+                    <div class="form-group">
+                        <label>Nome do Campeonato</label><label class="asterisco">*</label>
+                        <input type="text" class="form-control" placeholder="Nome do campeonato" id="nome">
+                    </div>
+                    
+                    <!-- Combo-box de Modalidade -->
+                    <label>Modalidade</label><label class="asterisco">*</label>
+                    <select class="form-control select" id="modalidade">
+                        <option>Selecione uma modalidade...</option>
+                        <option>Basquete</option>
+                        <option>Futebol</option>
+                        <option>Vôlei</option>
+                    </select>
+                    
+                    <!-- Combo-box de Classificação -->
+                    <label>Classificação</label><label class="asterisco">*</label>
+                    <a href="#"><i class="material-icons" style="font-size:14px; color: grey">help_outline</i></a>
+                    <select class="form-control select" id="classificacao">
+                        <option>Selecione uma classificação...</option>
+                        <option>Mata-mata</option>
+                        <option>Campeonato</option>
+                    </select>
+                    
+                    <!-- Caixa de Texto da Data de Início -->
+                    <div class="form-group">
+                        <label>Data de Início</label><label class="asterisco">*</label>
+                        <input type="date" class="form-control datas" placeholder="DD/MM/AAAA" id="dataInicio">
+                    </div>
+                    
+                    <!-- Caixa de Texto da Data de Finalização -->
+                    <div class="form-group">
+                        <label>Data de Fim</label>
+                        <input type="date" class="form-control datas" placeholder="DD/MM/AAAA" id="dataFim">
+                    </div>
+
+                    <div class="custom-file">
+                        <label class="custom-file-label" for="customFile">Enviar as regras (.pdf)</label>
+                        <input type="file" class="custom-file-input" id="regras">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="comment" style="margin-top: 1%">Descrição</label><label class="asterisco">*</label>
+                        <textarea class="form-control datas" rows="3" id="descricao" placeholder="Descrição sobre o campeonato: fale sobre o time, os jogadores..." style="font-variant-caps: normal"></textarea>
+                    </div>
+                    
+                    <div class="col-lg-8 text-right" style="margin-bottom: 5%;">
+                        <button class="btn btn-cancel" style="margin-right: 38%" type="submit">Cancelar</button>
+                        <button class="btn btn-primary" style="margin-right: 12%" type="submit">Prosseguir</button>
+                    </div> 
+                </form>
+            </div>    
+        </div>
+        
+        
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+</html>
