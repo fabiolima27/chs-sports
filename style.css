@@ -103,12 +103,6 @@
     display: block;
 }
 
-inputbox{
-    margin-left: 8%;
-    min-width: 50%;
-    max-width: 40%;
-}
-
 .custom-file-input{margin-left: 8%;}
 
 h2{
@@ -125,12 +119,4 @@ nav{
     height: 55%;
     min-height: 55px;
     max-height: 300px;
-}
-
-.btn-success{
-    height: 30px;
-    vertical-align: middle;
-    display: table-cell;
-    line-height: 0.5;
-    font-size: 12pt;
 }
