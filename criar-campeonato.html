@@ -9,11 +9,13 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
         <link href="style.css" rel="stylesheet">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     </head>
     
     <body>
+        <!-- Navbar -->
         <nav class="navbar navbar-light" style="nav">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -21,16 +23,16 @@
                 </div>
                 <ul class="nav navbar-nav navbar-right">
                     <form class="navbar-form navbar-left" action="/action_page.php">
-                        <div class="input-group">
-                            <input type="text" class="form-control search-bar" placeholder="Buscar campeonatos, times...">
-                            <div class="input-group-btn">
-                            <button class="btn btn-default search" type="submit">
-                                <i class="glyphicon glyphicon-search"></i>
-                            </button>
-                            </div>
+                        <div class="col">                        
+                        <!-- Barra de Pesquisa -->
+                            <form action="" autocomplete="on">
+                                <input class="form-control" type="search" placeholder="Buscar campeonatos, times...">
+                            <button class="btn btn-lg btn-success" type="submit">Procurar</button>
+                            </form>
                         </div>
                     </form>
-                    <li><!--<a href="#" class="username">Nome do Usuário</a></li>-->
+                    <li>
+                        <!-- Menu Dropdown -->
                         <div class="dropdown">
                             <button type="button" class="btn username dropdown-toggle" data-toggle="dropdown"> <img src="imagens/default-profile-icon.png" height="35" style="margin-right: 5px"/> Nome do Usuário  <span class="caret"></span></button>
                             <div class="dropdown-menu" height="100" role="menu">
@@ -50,8 +52,8 @@
                 <form>
                     <!-- Caixa de Texto do Nome do Campeonato -->
                     <div class="form-group">
-                        <label>Nome do Campeonato</label><label class="asterisco">*</label>
-                        <input type="text" class="form-control" placeholder="Nome do campeonato" id="nome">
+                        <label>Nome do Campeonato</label><label class="asterisco" style="margin-bottom: 2px">*</label><p></p>
+                        <textarea class="form-control datas" rows="1" maxlength="1" id="nome" placeholder="Nome"></textarea>
                     </div>
                     
                     <!-- Combo-box de Modalidade -->
@@ -75,25 +77,28 @@
                     <!-- Caixa de Texto da Data de Início -->
                     <div class="form-group">
                         <label>Data de Início</label><label class="asterisco">*</label>
-                        <input type="date" class="form-control datas" placeholder="DD/MM/AAAA" id="dataInicio">
+                        <input type="date" class="form-control datas" placeholder="DD/MM/AAAA" id="dataInicio" style="font-variant-caps: all-petite-caps">
                     </div>
                     
                     <!-- Caixa de Texto da Data de Finalização -->
                     <div class="form-group">
                         <label>Data de Fim</label>
-                        <input type="date" class="form-control datas" placeholder="DD/MM/AAAA" id="dataFim">
+                        <input type="date" class="form-control datas" placeholder="DD/MM/AAAA" style="font-variant-caps: all-petite-caps" id="dataFim">
                     </div>
 
+                    <!-- Box de Enviar arquivo de regra -->
                     <div class="custom-file">
                         <label class="custom-file-label" for="customFile">Enviar as regras (.pdf)</label>
                         <input type="file" class="custom-file-input" id="regras">
                     </div>
                     
+                    <!-- Box de Descrição -->
                     <div class="form-group">
                         <label for="comment" style="margin-top: 1%">Descrição</label><label class="asterisco">*</label>
-                        <textarea class="form-control datas" rows="3" id="descricao" placeholder="Descrição sobre o campeonato: fale sobre o time, os jogadores..." style="font-variant-caps: normal"></textarea>
+                        <textarea class="form-control datas" rows="3" id="descricao" placeholder="Descrição sobre o campeonato: fale sobre o time, os jogadores..."></textarea>
                     </div>
                     
+                    <!--Botões de Cancelar e Prosseguir -->
                     <div class="col-lg-8 text-right" style="margin-bottom: 5%;">
                         <button class="btn btn-cancel" style="margin-right: 38%" type="submit">Cancelar</button>
                         <button class="btn btn-primary" style="margin-right: 12%" type="submit">Prosseguir</button>

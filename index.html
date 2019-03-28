@@ -17,19 +17,14 @@
         <nav class="navbar navbar-light" style="nav">
             <div class="container-fluid">
                 <div class="navbar-header">
+                    <!-- Define a logo posicionada na esquerda da janela -->
                     <a class="navbar-left" href="#"><img src="imagens/logo.png" width="270" height="45"></a>
                 </div>
-                <ul class="nav navbar-nav navbar-right">
-                    <form class="navbar-form navbar-left" action="/action_page.php">
-                        <div class="input-group">
-                            <input type="text" class="form-control search-bar" placeholder="Buscar campeonatos, times...">
-                            <div class="input-group-btn">
-                            <button class="btn btn-default search" type="submit">
-                                <i class="glyphicon glyphicon-search"></i>
-                            </button>
-                            </div>
-                        </div>
-                    </form>
+                <!-- Posiciona os outros componentes a direita da janela -->
+                <ul class="nav navbar-nav navbar-right">                    
+                    <li><input class="form-control" type="search" width="450px" placeholder="Buscar campeonatos, times..."></li>
+                    <li><button class="btn btn-lg btn-default" height="20" type="submit"><img src="imagens/search-icon.png" height="20px"/></button></li>
+                    <!-- Botões de Login e Registrar-se -->
                     <li><a href="#" class="btn-login " ><img src="imagens/login.png" width="25" height ="25"/></a></li>
                     <li><button class="btn btn-primary" type="submit">Registrar-se</button></li>
                 </ul>
@@ -37,7 +32,9 @@
         </nav>
         
         <div class="row">
+            <!-- Conteúdo -->
             <div class="col-lg-12 text-center">
+                <!-- Header, texto e botão -->
                 <img class="header" src="imagens/header.png"/><br/><br/>
                 <h2>Crie o seu campeonato, é gratuito!</h2>
                 <button class="btn btn-register" type="submit">Registrar-se</button>
